@@ -7,18 +7,125 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		664D380A81E6057396594C7D /* Pods_SIPTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE660B9A227B8040D721E933 /* Pods_SIPTV.framework */; };
+		9D04A0F728C0F8360032E2BB /* SeriesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A0F628C0F8360032E2BB /* SeriesCategory.swift */; };
+		9D04A0F928C0F84E0032E2BB /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A0F828C0F84E0032E2BB /* Serie.swift */; };
+		9D04A0FB28C0F96D0032E2BB /* SerieCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A0FA28C0F96D0032E2BB /* SerieCategoryView.swift */; };
+		9D04A0FD28C0FB9B0032E2BB /* SerieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A0FC28C0FB9B0032E2BB /* SerieCell.swift */; };
+		9D04A0FF28C0FBC70032E2BB /* SerieCategoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A0FE28C0FBC70032E2BB /* SerieCategoryDetailsView.swift */; };
+		9D04A10128C0FC610032E2BB /* SerieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A10028C0FC610032E2BB /* SerieDetailsView.swift */; };
+		9D04A10328C1066A0032E2BB /* SerieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A10228C1066A0032E2BB /* SerieInfo.swift */; };
+		9D04A10528C122B30032E2BB /* SeasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A10428C122B30032E2BB /* SeasonView.swift */; };
+		9D04A10728C1263D0032E2BB /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A10628C1263D0032E2BB /* EpisodeView.swift */; };
+		9DA4315D28BE154600CF4A75 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4315C28BE154600CF4A75 /* Fonts.swift */; };
+		9DA4316128BE18E300CF4A75 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4316028BE18E300CF4A75 /* Movie.swift */; };
+		9DA4317A28BE738D00CF4A75 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317328BE737900CF4A75 /* Roboto-Black.ttf */; };
+		9DA4317B28BE738D00CF4A75 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317128BE737800CF4A75 /* Roboto-Thin.ttf */; };
+		9DA4317C28BE738D00CF4A75 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4316B28BE737800CF4A75 /* Roboto-Bold.ttf */; };
+		9DA4317D28BE738D00CF4A75 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4316D28BE737800CF4A75 /* Roboto-Regular.ttf */; };
+		9DA4317E28BE738D00CF4A75 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317528BE737900CF4A75 /* Roboto-Light.ttf */; };
+		9DA4317F28BE738D00CF4A75 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4316C28BE737800CF4A75 /* Roboto-BlackItalic.ttf */; };
+		9DA4318028BE738D00CF4A75 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4316A28BE737800CF4A75 /* Roboto-BoldItalic.ttf */; };
+		9DA4318128BE738D00CF4A75 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4316F28BE737800CF4A75 /* Roboto-LightItalic.ttf */; };
+		9DA4318228BE738D00CF4A75 /* Roboto-BoldCondensedItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317428BE737900CF4A75 /* Roboto-BoldCondensedItalic.ttf */; };
+		9DA4318328BE738D00CF4A75 /* Roboto-BoldCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4316E28BE737800CF4A75 /* Roboto-BoldCondensed.ttf */; };
+		9DA4318428BE738D00CF4A75 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317028BE737800CF4A75 /* Roboto-Medium.ttf */; };
+		9DA4318528BE738D00CF4A75 /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317228BE737800CF4A75 /* Roboto-Condensed.ttf */; };
+		9DA4318628BE738D00CF4A75 /* Roboto-CondensedItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317728BE737900CF4A75 /* Roboto-CondensedItalic.ttf */; };
+		9DA4318728BE738D00CF4A75 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317828BE737900CF4A75 /* Roboto-MediumItalic.ttf */; };
+		9DA4318828BE738D00CF4A75 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317928BE737900CF4A75 /* Roboto-ThinItalic.ttf */; };
+		9DA4318928BE738D00CF4A75 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317628BE737900CF4A75 /* Roboto-Italic.ttf */; };
+		9DA4318C28BE754400CF4A75 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4318B28BE754400CF4A75 /* MovieCell.swift */; };
+		9DA4318E28BE79A800CF4A75 /* LightStatusBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4318D28BE79A800CF4A75 /* LightStatusBarModifier.swift */; };
+		9DA4319028BF9E0300CF4A75 /* VodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4318F28BF9E0300CF4A75 /* VodInfo.swift */; };
+		9DD0254128C29EE800360DFD /* SerieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD0254028C29EE800360DFD /* SerieDetailsViewModel.swift */; };
 		D71C058628B67D0500FBFC5C /* SIPTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C058528B67D0500FBFC5C /* SIPTVApp.swift */; };
-		D71C058828B67D0500FBFC5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C058728B67D0500FBFC5C /* ContentView.swift */; };
 		D71C058A28B67D0700FBFC5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71C058928B67D0700FBFC5C /* Assets.xcassets */; };
 		D71C058D28B67D0700FBFC5C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71C058C28B67D0700FBFC5C /* Preview Assets.xcassets */; };
+		D71C059C28B6B32400FBFC5C /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C059B28B6B32400FBFC5C /* Profil.swift */; };
+		D71C059E28B6C66A00FBFC5C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C059D28B6C66A00FBFC5C /* Category.swift */; };
+		D71C05A028B6C81000FBFC5C /* XtreamAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C059F28B6C81000FBFC5C /* XtreamAgent.swift */; };
+		D71C05A328B6DA5200FBFC5C /* LiveStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C05A228B6DA5200FBFC5C /* LiveStream.swift */; };
+		D71C05A528B6DF1C00FBFC5C /* MovieStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C05A428B6DF1C00FBFC5C /* MovieStream.swift */; };
+		D74BB89328BBDA9A0028E0DC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D74BB89228BBDA9A0028E0DC /* Kingfisher */; };
+		D74BB89528BBDCB60028E0DC /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74BB89428BBDCB60028E0DC /* MovieDetailsView.swift */; };
+		D74BB89728BBF9370028E0DC /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74BB89628BBF9370028E0DC /* VideoPlayerView.swift */; };
+		D76C4B1A28B77D610065CDCD /* SeriesStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B1928B77D610065CDCD /* SeriesStream.swift */; };
+		D76C4B1C28B7962D0065CDCD /* XtreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B1B28B7962D0065CDCD /* XtreamManager.swift */; };
+		D76C4B1E28B797180065CDCD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B1D28B797180065CDCD /* MainView.swift */; };
+		D76C4B2128B7EC610065CDCD /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2028B7EC610065CDCD /* MoviesView.swift */; };
+		D76C4B2328B7EC760065CDCD /* SeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2228B7EC760065CDCD /* SeriesView.swift */; };
+		D76C4B2528B7ECC30065CDCD /* LiveTVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2428B7ECC30065CDCD /* LiveTVView.swift */; };
+		D76C4B2828B7ED170065CDCD /* SectionsBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2728B7ED170065CDCD /* SectionsBarView.swift */; };
+		D76C4B2B28B7EED50065CDCD /* MovieCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2A28B7EED50065CDCD /* MovieCategoryView.swift */; };
+		D76C4B2D28B7F0A50065CDCD /* XtreamSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2C28B7F0A50065CDCD /* XtreamSession.swift */; };
+		D76C4B3028B7F1BF0065CDCD /* MoviesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2F28B7F1BF0065CDCD /* MoviesCategory.swift */; };
+		D76C4B3428B7F2230065CDCD /* LiveTvCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B3328B7F2230065CDCD /* LiveTvCategory.swift */; };
+		D7F330F628B945EB001C6E46 /* MovieCategoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F330F528B945EB001C6E46 /* MovieCategoryDetailsView.swift */; };
+		D7F330F828B95BD6001C6E46 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F330F728B95BD6001C6E46 /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5581871A2CF2238F8906D148 /* Pods-SIPTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIPTV.release.xcconfig"; path = "Target Support Files/Pods-SIPTV/Pods-SIPTV.release.xcconfig"; sourceTree = "<group>"; };
+		9D04A0F628C0F8360032E2BB /* SeriesCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCategory.swift; sourceTree = "<group>"; };
+		9D04A0F828C0F84E0032E2BB /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
+		9D04A0FA28C0F96D0032E2BB /* SerieCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCategoryView.swift; sourceTree = "<group>"; };
+		9D04A0FC28C0FB9B0032E2BB /* SerieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCell.swift; sourceTree = "<group>"; };
+		9D04A0FE28C0FBC70032E2BB /* SerieCategoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCategoryDetailsView.swift; sourceTree = "<group>"; };
+		9D04A10028C0FC610032E2BB /* SerieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsView.swift; sourceTree = "<group>"; };
+		9D04A10228C1066A0032E2BB /* SerieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieInfo.swift; sourceTree = "<group>"; };
+		9D04A10428C122B30032E2BB /* SeasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonView.swift; sourceTree = "<group>"; };
+		9D04A10628C1263D0032E2BB /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		9DA4315C28BE154600CF4A75 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		9DA4316028BE18E300CF4A75 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		9DA4316A28BE737800CF4A75 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9DA4316B28BE737800CF4A75 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		9DA4316C28BE737800CF4A75 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		9DA4316D28BE737800CF4A75 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		9DA4316E28BE737800CF4A75 /* Roboto-BoldCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensed.ttf"; sourceTree = "<group>"; };
+		9DA4316F28BE737800CF4A75 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		9DA4317028BE737800CF4A75 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		9DA4317128BE737800CF4A75 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		9DA4317228BE737800CF4A75 /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
+		9DA4317328BE737900CF4A75 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		9DA4317428BE737900CF4A75 /* Roboto-BoldCondensedItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensedItalic.ttf"; sourceTree = "<group>"; };
+		9DA4317528BE737900CF4A75 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		9DA4317628BE737900CF4A75 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		9DA4317728BE737900CF4A75 /* Roboto-CondensedItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-CondensedItalic.ttf"; sourceTree = "<group>"; };
+		9DA4317828BE737900CF4A75 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		9DA4317928BE737900CF4A75 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		9DA4318B28BE754400CF4A75 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		9DA4318D28BE79A800CF4A75 /* LightStatusBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightStatusBarModifier.swift; sourceTree = "<group>"; };
+		9DA4318F28BF9E0300CF4A75 /* VodInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodInfo.swift; sourceTree = "<group>"; };
+		9DD0254028C29EE800360DFD /* SerieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsViewModel.swift; sourceTree = "<group>"; };
+		A499CA7370EFCD9F4A8462BD /* Pods-SIPTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIPTV.debug.xcconfig"; path = "Target Support Files/Pods-SIPTV/Pods-SIPTV.debug.xcconfig"; sourceTree = "<group>"; };
+		AE660B9A227B8040D721E933 /* Pods_SIPTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIPTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71C058228B67D0500FBFC5C /* SIPTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIPTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71C058528B67D0500FBFC5C /* SIPTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIPTVApp.swift; sourceTree = "<group>"; };
-		D71C058728B67D0500FBFC5C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D71C058928B67D0700FBFC5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D71C058C28B67D0700FBFC5C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D71C059B28B6B32400FBFC5C /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
+		D71C059D28B6C66A00FBFC5C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D71C059F28B6C81000FBFC5C /* XtreamAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamAgent.swift; sourceTree = "<group>"; };
+		D71C05A128B6CDDB00FBFC5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D71C05A228B6DA5200FBFC5C /* LiveStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStream.swift; sourceTree = "<group>"; };
+		D71C05A428B6DF1C00FBFC5C /* MovieStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStream.swift; sourceTree = "<group>"; };
+		D74BB89428BBDCB60028E0DC /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
+		D74BB89628BBF9370028E0DC /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		D74BB89828BC02FC0028E0DC /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		D76C4B1928B77D610065CDCD /* SeriesStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesStream.swift; sourceTree = "<group>"; };
+		D76C4B1B28B7962D0065CDCD /* XtreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamManager.swift; sourceTree = "<group>"; };
+		D76C4B1D28B797180065CDCD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D76C4B2028B7EC610065CDCD /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		D76C4B2228B7EC760065CDCD /* SeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesView.swift; sourceTree = "<group>"; };
+		D76C4B2428B7ECC30065CDCD /* LiveTVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTVView.swift; sourceTree = "<group>"; };
+		D76C4B2728B7ED170065CDCD /* SectionsBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsBarView.swift; sourceTree = "<group>"; };
+		D76C4B2A28B7EED50065CDCD /* MovieCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCategoryView.swift; sourceTree = "<group>"; };
+		D76C4B2C28B7F0A50065CDCD /* XtreamSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamSession.swift; sourceTree = "<group>"; };
+		D76C4B2F28B7F1BF0065CDCD /* MoviesCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCategory.swift; sourceTree = "<group>"; };
+		D76C4B3328B7F2230065CDCD /* LiveTvCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTvCategory.swift; sourceTree = "<group>"; };
+		D7F330F528B945EB001C6E46 /* MovieCategoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCategoryDetailsView.swift; sourceTree = "<group>"; };
+		D7F330F728B95BD6001C6E46 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +133,125 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74BB89328BBDA9A0028E0DC /* Kingfisher in Frameworks */,
+				664D380A81E6057396594C7D /* Pods_SIPTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D04A0F528C0F81C0032E2BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D04A0F628C0F8360032E2BB /* SeriesCategory.swift */,
+				9D04A0F828C0F84E0032E2BB /* Serie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DA4315928BE146000CF4A75 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9DA4318A28BE739300CF4A75 /* BoldFont */,
+				D71C058B28B67D0700FBFC5C /* Preview Content */,
+				D71C05A128B6CDDB00FBFC5C /* Info.plist */,
+				D71C058928B67D0700FBFC5C /* Assets.xcassets */,
+				9DA4315C28BE154600CF4A75 /* Fonts.swift */,
+				9DA4318D28BE79A800CF4A75 /* LightStatusBarModifier.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9DA4315E28BE15AE00CF4A75 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				9D04A0F528C0F81C0032E2BB /* Model */,
+				D76C4B2228B7EC760065CDCD /* SeriesView.swift */,
+				9D04A0FA28C0F96D0032E2BB /* SerieCategoryView.swift */,
+				9D04A0FC28C0FB9B0032E2BB /* SerieCell.swift */,
+				9D04A0FE28C0FBC70032E2BB /* SerieCategoryDetailsView.swift */,
+				9D04A10028C0FC610032E2BB /* SerieDetailsView.swift */,
+				9DD0254028C29EE800360DFD /* SerieDetailsViewModel.swift */,
+				9D04A10428C122B30032E2BB /* SeasonView.swift */,
+				9D04A10628C1263D0032E2BB /* EpisodeView.swift */,
+			);
+			path = Series;
+			sourceTree = "<group>";
+		};
+		9DA4315F28BE18B200CF4A75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D76C4B2F28B7F1BF0065CDCD /* MoviesCategory.swift */,
+				9DA4316028BE18E300CF4A75 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DA4316228BE6B1300CF4A75 /* LiveTvs */ = {
+			isa = PBXGroup;
+			children = (
+				D76C4B2428B7ECC30065CDCD /* LiveTVView.swift */,
+			);
+			path = LiveTvs;
+			sourceTree = "<group>";
+		};
+		9DA4316328BE6B2D00CF4A75 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D7F330F728B95BD6001C6E46 /* NavigationBar.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		9DA4318A28BE739300CF4A75 /* BoldFont */ = {
+			isa = PBXGroup;
+			children = (
+				9DA4317328BE737900CF4A75 /* Roboto-Black.ttf */,
+				9DA4316C28BE737800CF4A75 /* Roboto-BlackItalic.ttf */,
+				9DA4316B28BE737800CF4A75 /* Roboto-Bold.ttf */,
+				9DA4316E28BE737800CF4A75 /* Roboto-BoldCondensed.ttf */,
+				9DA4317428BE737900CF4A75 /* Roboto-BoldCondensedItalic.ttf */,
+				9DA4316A28BE737800CF4A75 /* Roboto-BoldItalic.ttf */,
+				9DA4317228BE737800CF4A75 /* Roboto-Condensed.ttf */,
+				9DA4317728BE737900CF4A75 /* Roboto-CondensedItalic.ttf */,
+				9DA4317628BE737900CF4A75 /* Roboto-Italic.ttf */,
+				9DA4317528BE737900CF4A75 /* Roboto-Light.ttf */,
+				9DA4316F28BE737800CF4A75 /* Roboto-LightItalic.ttf */,
+				9DA4317028BE737800CF4A75 /* Roboto-Medium.ttf */,
+				9DA4317828BE737900CF4A75 /* Roboto-MediumItalic.ttf */,
+				9DA4316D28BE737800CF4A75 /* Roboto-Regular.ttf */,
+				9DA4317128BE737800CF4A75 /* Roboto-Thin.ttf */,
+				9DA4317928BE737900CF4A75 /* Roboto-ThinItalic.ttf */,
+			);
+			path = BoldFont;
+			sourceTree = "<group>";
+		};
+		9F7DFFB3528C1B50D1869EEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D74BB89828BC02FC0028E0DC /* AVKit.framework */,
+				AE660B9A227B8040D721E933 /* Pods_SIPTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5BF5A59471035F28ECF9BB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A499CA7370EFCD9F4A8462BD /* Pods-SIPTV.debug.xcconfig */,
+				5581871A2CF2238F8906D148 /* Pods-SIPTV.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D71C057928B67D0500FBFC5C = {
 			isa = PBXGroup;
 			children = (
 				D71C058428B67D0500FBFC5C /* SIPTV */,
 				D71C058328B67D0500FBFC5C /* Products */,
+				B5BF5A59471035F28ECF9BB4 /* Pods */,
+				9F7DFFB3528C1B50D1869EEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +267,10 @@
 			isa = PBXGroup;
 			children = (
 				D71C058528B67D0500FBFC5C /* SIPTVApp.swift */,
-				D71C058728B67D0500FBFC5C /* ContentView.swift */,
-				D71C058928B67D0700FBFC5C /* Assets.xcassets */,
-				D71C058B28B67D0700FBFC5C /* Preview Content */,
+				D76C4B2E28B7F1950065CDCD /* Model */,
+				D76C4B1F28B7EBF60065CDCD /* Views */,
+				D71C059A28B6B2F500FBFC5C /* Xtream Client */,
+				9DA4315928BE146000CF4A75 /* Resources */,
 			);
 			path = SIPTV;
 			sourceTree = "<group>";
@@ -67,6 +283,58 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D71C059A28B6B2F500FBFC5C /* Xtream Client */ = {
+			isa = PBXGroup;
+			children = (
+				D71C059F28B6C81000FBFC5C /* XtreamAgent.swift */,
+				D71C059B28B6B32400FBFC5C /* Profil.swift */,
+				D71C059D28B6C66A00FBFC5C /* Category.swift */,
+				D71C05A228B6DA5200FBFC5C /* LiveStream.swift */,
+				D71C05A428B6DF1C00FBFC5C /* MovieStream.swift */,
+				D76C4B1928B77D610065CDCD /* SeriesStream.swift */,
+				9DA4318F28BF9E0300CF4A75 /* VodInfo.swift */,
+				9D04A10228C1066A0032E2BB /* SerieInfo.swift */,
+			);
+			path = "Xtream Client";
+			sourceTree = "<group>";
+		};
+		D76C4B1F28B7EBF60065CDCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D76C4B1D28B797180065CDCD /* MainView.swift */,
+				D76C4B2728B7ED170065CDCD /* SectionsBarView.swift */,
+				D76C4B2928B7EEBA0065CDCD /* Movies */,
+				9DA4316228BE6B1300CF4A75 /* LiveTvs */,
+				9DA4315E28BE15AE00CF4A75 /* Series */,
+				9DA4316328BE6B2D00CF4A75 /* Others */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D76C4B2928B7EEBA0065CDCD /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				9DA4315F28BE18B200CF4A75 /* Model */,
+				D76C4B2028B7EC610065CDCD /* MoviesView.swift */,
+				D76C4B2A28B7EED50065CDCD /* MovieCategoryView.swift */,
+				9DA4318B28BE754400CF4A75 /* MovieCell.swift */,
+				D7F330F528B945EB001C6E46 /* MovieCategoryDetailsView.swift */,
+				D74BB89428BBDCB60028E0DC /* MovieDetailsView.swift */,
+				D74BB89628BBF9370028E0DC /* VideoPlayerView.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		D76C4B2E28B7F1950065CDCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D76C4B1B28B7962D0065CDCD /* XtreamManager.swift */,
+				D76C4B2C28B7F0A50065CDCD /* XtreamSession.swift */,
+				D76C4B3328B7F2230065CDCD /* LiveTvCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +342,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D71C059028B67D0700FBFC5C /* Build configuration list for PBXNativeTarget "SIPTV" */;
 			buildPhases = (
+				DA1B4729E708DF1AB5302082 /* [CP] Check Pods Manifest.lock */,
 				D71C057E28B67D0500FBFC5C /* Sources */,
 				D71C057F28B67D0500FBFC5C /* Frameworks */,
 				D71C058028B67D0500FBFC5C /* Resources */,
@@ -83,6 +352,9 @@
 			dependencies = (
 			);
 			name = SIPTV;
+			packageProductDependencies = (
+				D74BB89228BBDA9A0028E0DC /* Kingfisher */,
+			);
 			productName = SIPTV;
 			productReference = D71C058228B67D0500FBFC5C /* SIPTV.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +383,9 @@
 				Base,
 			);
 			mainGroup = D71C057928B67D0500FBFC5C;
+			packageReferences = (
+				D74BB89128BBDA9A0028E0DC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = D71C058328B67D0500FBFC5C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,20 +400,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA4318428BE738D00CF4A75 /* Roboto-Medium.ttf in Resources */,
+				9DA4318928BE738D00CF4A75 /* Roboto-Italic.ttf in Resources */,
+				9DA4318028BE738D00CF4A75 /* Roboto-BoldItalic.ttf in Resources */,
+				9DA4317D28BE738D00CF4A75 /* Roboto-Regular.ttf in Resources */,
+				9DA4318128BE738D00CF4A75 /* Roboto-LightItalic.ttf in Resources */,
+				9DA4317B28BE738D00CF4A75 /* Roboto-Thin.ttf in Resources */,
 				D71C058D28B67D0700FBFC5C /* Preview Assets.xcassets in Resources */,
+				9DA4318228BE738D00CF4A75 /* Roboto-BoldCondensedItalic.ttf in Resources */,
+				9DA4317C28BE738D00CF4A75 /* Roboto-Bold.ttf in Resources */,
+				9DA4317E28BE738D00CF4A75 /* Roboto-Light.ttf in Resources */,
 				D71C058A28B67D0700FBFC5C /* Assets.xcassets in Resources */,
+				9DA4318828BE738D00CF4A75 /* Roboto-ThinItalic.ttf in Resources */,
+				9DA4318628BE738D00CF4A75 /* Roboto-CondensedItalic.ttf in Resources */,
+				9DA4317A28BE738D00CF4A75 /* Roboto-Black.ttf in Resources */,
+				9DA4318728BE738D00CF4A75 /* Roboto-MediumItalic.ttf in Resources */,
+				9DA4318328BE738D00CF4A75 /* Roboto-BoldCondensed.ttf in Resources */,
+				9DA4317F28BE738D00CF4A75 /* Roboto-BlackItalic.ttf in Resources */,
+				9DA4318528BE738D00CF4A75 /* Roboto-Condensed.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA1B4729E708DF1AB5302082 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SIPTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D71C057E28B67D0500FBFC5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D71C058828B67D0500FBFC5C /* ContentView.swift in Sources */,
+				D71C05A528B6DF1C00FBFC5C /* MovieStream.swift in Sources */,
+				D76C4B2528B7ECC30065CDCD /* LiveTVView.swift in Sources */,
+				D74BB89528BBDCB60028E0DC /* MovieDetailsView.swift in Sources */,
+				D76C4B2D28B7F0A50065CDCD /* XtreamSession.swift in Sources */,
+				D7F330F628B945EB001C6E46 /* MovieCategoryDetailsView.swift in Sources */,
+				D76C4B3028B7F1BF0065CDCD /* MoviesCategory.swift in Sources */,
+				9D04A0FD28C0FB9B0032E2BB /* SerieCell.swift in Sources */,
+				9D04A10528C122B30032E2BB /* SeasonView.swift in Sources */,
+				D76C4B2128B7EC610065CDCD /* MoviesView.swift in Sources */,
+				D74BB89728BBF9370028E0DC /* VideoPlayerView.swift in Sources */,
+				9DA4319028BF9E0300CF4A75 /* VodInfo.swift in Sources */,
+				9D04A10128C0FC610032E2BB /* SerieDetailsView.swift in Sources */,
+				9DD0254128C29EE800360DFD /* SerieDetailsViewModel.swift in Sources */,
+				9D04A10328C1066A0032E2BB /* SerieInfo.swift in Sources */,
+				D76C4B2B28B7EED50065CDCD /* MovieCategoryView.swift in Sources */,
+				D71C059C28B6B32400FBFC5C /* Profil.swift in Sources */,
+				9D04A0FB28C0F96D0032E2BB /* SerieCategoryView.swift in Sources */,
+				9D04A0F728C0F8360032E2BB /* SeriesCategory.swift in Sources */,
+				D76C4B3428B7F2230065CDCD /* LiveTvCategory.swift in Sources */,
+				D7F330F828B95BD6001C6E46 /* NavigationBar.swift in Sources */,
+				9D04A10728C1263D0032E2BB /* EpisodeView.swift in Sources */,
+				9DA4318E28BE79A800CF4A75 /* LightStatusBarModifier.swift in Sources */,
+				D76C4B1E28B797180065CDCD /* MainView.swift in Sources */,
+				D76C4B2328B7EC760065CDCD /* SeriesView.swift in Sources */,
+				9D04A0FF28C0FBC70032E2BB /* SerieCategoryDetailsView.swift in Sources */,
+				9DA4315D28BE154600CF4A75 /* Fonts.swift in Sources */,
 				D71C058628B67D0500FBFC5C /* SIPTVApp.swift in Sources */,
+				D76C4B2828B7ED170065CDCD /* SectionsBarView.swift in Sources */,
+				D76C4B1A28B77D610065CDCD /* SeriesStream.swift in Sources */,
+				D71C059E28B6C66A00FBFC5C /* Category.swift in Sources */,
+				D71C05A028B6C81000FBFC5C /* XtreamAgent.swift in Sources */,
+				9DA4316128BE18E300CF4A75 /* Movie.swift in Sources */,
+				D71C05A328B6DA5200FBFC5C /* LiveStream.swift in Sources */,
+				9DA4318C28BE754400CF4A75 /* MovieCell.swift in Sources */,
+				D76C4B1C28B7962D0065CDCD /* XtreamManager.swift in Sources */,
+				9D04A0F928C0F84E0032E2BB /* Serie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,15 +613,17 @@
 		};
 		D71C059128B67D0700FBFC5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A499CA7370EFCD9F4A8462BD /* Pods-SIPTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SIPTV/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SIPTV/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = H3L65AU3DA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SIPTV/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,15 +645,17 @@
 		};
 		D71C059228B67D0700FBFC5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5581871A2CF2238F8906D148 /* Pods-SIPTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SIPTV/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SIPTV/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = H3L65AU3DA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SIPTV/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -343,6 +697,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D74BB89128BBDA9A0028E0DC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D74BB89228BBDA9A0028E0DC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D74BB89128BBDA9A0028E0DC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D71C057A28B67D0500FBFC5C /* Project object */;
 }
