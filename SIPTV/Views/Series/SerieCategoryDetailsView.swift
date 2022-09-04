@@ -54,7 +54,7 @@ struct SerieCategoryDetailsView: View {
         .ignoresSafeArea()
         .sheet(isPresented: $displaySerie) {
             if let selectedSerie = selectedSerie{
-                SerieDetailsView(selectedSerie: selectedSerie)
+                SerieDetailsView(serieDetailsVM: SerieDetailsViewModel(selectedSerie: selectedSerie))
             }
         }
     }

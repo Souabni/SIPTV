@@ -51,7 +51,7 @@ struct SeriesView: View {
         .background(Color.black)
         .fullScreenCover(isPresented: $displaySerie) {
             if let selectedSerie = self.selectedSerie{
-                SerieDetailsView(selectedSerie: selectedSerie)
+                SerieDetailsView(serieDetailsVM: SerieDetailsViewModel(selectedSerie: selectedSerie))
             }
         }
     }

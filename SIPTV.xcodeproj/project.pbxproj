@@ -39,6 +39,8 @@
 		9DA4318E28BE79A800CF4A75 /* LightStatusBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4318D28BE79A800CF4A75 /* LightStatusBarModifier.swift */; };
 		9DA4319028BF9E0300CF4A75 /* VodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4318F28BF9E0300CF4A75 /* VodInfo.swift */; };
 		9DD0254128C29EE800360DFD /* SerieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD0254028C29EE800360DFD /* SerieDetailsViewModel.swift */; };
+		9DD0254328C2A35C00360DFD /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD0254228C2A35C00360DFD /* Season.swift */; };
+		9DD0254528C2A46500360DFD /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD0254428C2A46500360DFD /* Episode.swift */; };
 		D71C058628B67D0500FBFC5C /* SIPTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C058528B67D0500FBFC5C /* SIPTVApp.swift */; };
 		D71C058A28B67D0700FBFC5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71C058928B67D0700FBFC5C /* Assets.xcassets */; };
 		D71C058D28B67D0700FBFC5C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71C058C28B67D0700FBFC5C /* Preview Assets.xcassets */; };
@@ -98,6 +100,8 @@
 		9DA4318D28BE79A800CF4A75 /* LightStatusBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightStatusBarModifier.swift; sourceTree = "<group>"; };
 		9DA4318F28BF9E0300CF4A75 /* VodInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodInfo.swift; sourceTree = "<group>"; };
 		9DD0254028C29EE800360DFD /* SerieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDetailsViewModel.swift; sourceTree = "<group>"; };
+		9DD0254228C2A35C00360DFD /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		9DD0254428C2A46500360DFD /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		A499CA7370EFCD9F4A8462BD /* Pods-SIPTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIPTV.debug.xcconfig"; path = "Target Support Files/Pods-SIPTV/Pods-SIPTV.debug.xcconfig"; sourceTree = "<group>"; };
 		AE660B9A227B8040D721E933 /* Pods_SIPTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIPTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71C058228B67D0500FBFC5C /* SIPTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIPTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +150,8 @@
 			children = (
 				9D04A0F628C0F8360032E2BB /* SeriesCategory.swift */,
 				9D04A0F828C0F84E0032E2BB /* Serie.swift */,
+				9DD0254228C2A35C00360DFD /* Season.swift */,
+				9DD0254428C2A46500360DFD /* Episode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -454,6 +460,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D71C05A528B6DF1C00FBFC5C /* MovieStream.swift in Sources */,
+				9DD0254528C2A46500360DFD /* Episode.swift in Sources */,
+				9DD0254328C2A35C00360DFD /* Season.swift in Sources */,
 				D76C4B2528B7ECC30065CDCD /* LiveTVView.swift in Sources */,
 				D74BB89528BBDCB60028E0DC /* MovieDetailsView.swift in Sources */,
 				D76C4B2D28B7F0A50065CDCD /* XtreamSession.swift in Sources */,

@@ -8,18 +8,18 @@
 import Foundation
 
 struct SerieInfo: Codable{
-    var seasons : [Season]?
+    var seasons : [SeasonInfo]?
     var info : SeriesStream?
-    var episodes : [String:[Episode]]?
+    var episodes : [String:[EpisodeInfo]]?
     
     public enum CodingKeys: String, CodingKey{
         case seasons
         case info
         case episodes
     }
-}
 
-struct Season: Codable{
+
+struct SeasonInfo: Codable{
     var id : Int?
     var name : String?
     var airDate : String?
@@ -41,19 +41,19 @@ struct Season: Codable{
     }
 }
 
-struct Episode: Codable{
-var id: String?
-var episodeNum: Int?
-var title: String?
-var containerExtension: String?
-var info: EpisodeInfo?
-var customSid: String?
-var added: String?
-var season: Int?
-var directSource: String?
+struct EpisodeInfo: Codable{
+    var id: String?
+    var episodeNum: Int?
+    var title: String?
+    var containerExtension: String?
+    var info: Info?
+    var customSid: String?
+    var added: String?
+    var season: Int?
+    var directSource: String?
     
     public enum CodingKeys: String, CodingKey{
-      case id
+        case id
         case episodeNum = "episode_num"
         case title
         case containerExtension = "container_extension"
@@ -64,28 +64,30 @@ var directSource: String?
         case directSource = "direct_source"
         
     }
-}
-
-struct EpisodeInfo: Codable{
-    var releasedate: String?
-    var plot: String?
-//    var durationSecs: Int?
-//    var duration: String?
-//    var movieImage: String?
-//    var bitrate: Int?
-//    var rating: String?
-//    var season: String?
-//    var tmdbId: String?
-//
-    public enum CodingKeys: String, CodingKey{
-        case releasedate
-        case plot
-//        case durationSecs = "duration_secs"
-//        case duration
-//        case movieImage = "movie_image"
-//        case bitrate
-//        case rating
-//        case season
-//        case tmdbId = "tmdb_id"
+    
+    
+    struct Info: Codable{
+        var releasedate: String?
+        var plot: String?
+        //    var durationSecs: Int?
+        //    var duration: String?
+           var movieImage: String?
+        //    var bitrate: Int?
+        //    var rating: String?
+        //    var season: String?
+        //    var tmdbId: String?
+        //
+        public enum CodingKeys: String, CodingKey{
+            case releasedate
+            case plot
+            //        case durationSecs = "duration_secs"
+            //        case duration
+                    case movieImage = "movie_image"
+            //        case bitrate
+            //        case rating
+            //        case season
+            //        case tmdbId = "tmdb_id"
+        }
     }
+}
 }

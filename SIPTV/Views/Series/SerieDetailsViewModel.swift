@@ -8,19 +8,27 @@
 import Foundation
 
 class SerieDetailsViewModel: ObservableObject{
-    var selectedSerie : Serie
+    @Published var selectedSerie : Serie
+   
+    @Published var selectedSection : String = "Saison 1"
+
+    @Published var selectedEpisodeID : String = ""
+    @Published var displayVideo : Bool = false
     
-    
-    @Published var coverURL: String
-    @Published var title: String
-    @Published var rating: Double
-    @Published var description: String
+  
     
     init(selectedSerie : Serie){
         self.selectedSerie = selectedSerie
+       
+    }
+    
+    func getSerieInfo(){
         XtreamManager.shared.currentSession.xtreamAgent.getSeriesInfo(seriesID: selectedSerie.serieID) { serieInfo in
+            DispatchQueue.main.async {
             print(serieInfo)
-            selectedSerie.set(info: serieInfo)
+            self.selectedSerie.set(info: serieInfo)
+            self.objectWillChange.send()
+            }
         }
     }
 }

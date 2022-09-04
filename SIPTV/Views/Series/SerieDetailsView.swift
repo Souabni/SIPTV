@@ -10,13 +10,9 @@ import Kingfisher
 
 struct SerieDetailsView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-   
-    @ObservedObject var serieDetailsVM : SerieDetailsViewModel
-    @State var selectedSection : String = "Saison 1"
-    
-    @State var displayVideo : Bool = false
-    @State var selectedEpisodeID : String = ""
-    
+
+    @StateObject var serieDetailsVM : SerieDetailsViewModel
+  
     
     var body: some View {
         GeometryReader{ geometry in
@@ -25,7 +21,7 @@ struct SerieDetailsView: View {
                 VStack(alignment: .leading){
                     ZStack(alignment: .topTrailing){
                         ZStack{
-                            if let SerieImage = selectedSerie.iconUrl, let SerieImageURL = URL(string:SerieImage){
+                            if let SerieImage = serieDetailsVM.selectedSerie.iconUrl, let SerieImageURL = URL(string:SerieImage){
                                 KFImage(SerieImageURL)
                                     .placeholder {
                                         Image("placeholderSerie")
@@ -39,7 +35,7 @@ struct SerieDetailsView: View {
                                     .clipped()
                             }
                             Button{
-                                displayVideo = true
+                                serieDetailsVM.displayVideo = true
                                 let value = UIInterfaceOrientation.landscapeRight.rawValue
                                 UIDevice.current.setValue(value, forKey: "orientation")
                             } label:{
@@ -65,9 +61,10 @@ struct SerieDetailsView: View {
                             
                         }
                     }
+                   
                     VStack(alignment:.leading,spacing:8){
                         HStack{
-                            Text(selectedSerie.name)
+                            Text(serieDetailsVM.selectedSerie.name)
                                 .foregroundColor(Color.white)
                             
                             Spacer()
@@ -77,37 +74,36 @@ struct SerieDetailsView: View {
                                 .frame(width: 30, height: 30)
                         }
                         
-                        Text(selectedSerie.info?.info?.plot ?? "plot")
-                        Text("Rating: \(selectedSerie.info?.info?.rating5based ?? 0)/5")
-                        Text("Genre: \(selectedSerie.info?.info?.genre ?? "")")
-                        Text("Cast: \(selectedSerie.info?.info?.cast ?? "")")
-                        if let serieSeasons = selectedSerie.info?.seasons{
-                            let sections = serieSeasons.map{$0.name ?? ""}
-                            SeasonView(sections:sections, selectedSection: $selectedSection){
-                                value.scrollTo(selectedSection, anchor: .top)
+                        Text(serieDetailsVM.selectedSerie.description)
+                        Text("Rating: \(serieDetailsVM.selectedSerie.rating5based ?? 0)/5")
+                        Text("Genre: \(serieDetailsVM.selectedSerie.genre ?? "")")
+                        Text("Cast: \(serieDetailsVM.selectedSerie.cast ?? "")")
+                        
+                        if let serieSeasons = serieDetailsVM.selectedSerie.seasons{
+                            let sections = serieSeasons.map{$0.name}
+                            SeasonView(sections:sections, selectedSection: $serieDetailsVM.selectedSection){
+                                value.scrollTo(serieDetailsVM.selectedSection, anchor: .top)
                             }
                         }
                         
                         
-                        ForEach (Array(selectedSerie.episodes.enumerated()),id:\.offset){ index, seasonEpisodes in
-                            if let seasons = selectedSerie.info?.seasons{
-                               Text(seasons[index].name ?? "")
-                                    .id(seasons[index].name ?? "")
-                            }
-                            
-                            ForEach (seasonEpisodes,id:\.id){ episode in
+                        ForEach (Array(serieDetailsVM.selectedSerie.seasons),id:\.name){season in
+                            Text(season.name)
+                            ForEach (season.episodes,id:\.id){ episode in
                                 Button{
-                                    selectedEpisodeID = episode.id ?? ""
-                                    displayVideo = true
+                                    self.serieDetailsVM.selectedEpisodeID = episode.id
+                                    self.serieDetailsVM.displayVideo = true
                                 }label:{
-                                EpisodeView(episodeID:episode.id ?? "",coverUrl:  "", title: episode.title ?? "", description: episode.info?.plot ?? "",displayVideo:$displayVideo,selectedEpisodeID:$selectedEpisodeID)
+                                    EpisodeView(episodeID:episode.id,coverUrl:  episode.coverUrl, title: episode.title, description:  episode.description, displayVideo:$serieDetailsVM.displayVideo,selectedEpisodeID:$serieDetailsVM.selectedEpisodeID)
                                 }
                             }
                         }
                         
                         Spacer()
+                        
                     }
                     .padding(.horizontal,8)
+                    
                 }
                 }
             }
@@ -115,12 +111,15 @@ struct SerieDetailsView: View {
             .foregroundColor(Color.white)
             .ignoresSafeArea()
         }
-        .sheet(isPresented: $displayVideo,onDismiss: {
+        .sheet(isPresented: $serieDetailsVM.displayVideo,onDismiss: {
             let value = UIInterfaceOrientation.portrait.rawValue
             UIDevice.current.setValue(value, forKey: "orientation")
             //presentationMode.wrappedValue.dismiss()
         }) {
-            VideoPlayerView(videoURL: "http://556677.ovh:25461/series/hn8rr4tp/opjmhaga/\(selectedEpisodeID).mp4")
+            VideoPlayerView(videoURL: "http://556677.ovh:25461/series/hn8rr4tp/opjmhaga/\(serieDetailsVM.selectedEpisodeID).mp4")
+        }
+        .onAppear(){
+            serieDetailsVM.getSerieInfo()
         }
     }
 }

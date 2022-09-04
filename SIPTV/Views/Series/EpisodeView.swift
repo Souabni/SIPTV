@@ -22,8 +22,8 @@ struct EpisodeView: View {
             
             HStack{
                 Button{
-//                    selectedEpisodeID = episodeID
-//                    displayVideo = true
+                  selectedEpisodeID = episodeID
+                    displayVideo = true
                 }label:{
                     ZStack{
                         if let iconURL = URL(string:coverUrl){

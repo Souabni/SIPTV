@@ -60,7 +60,7 @@ struct MovieDetailsView: View {
                 }
             }
             HStack{
-                Text(selectedMovie.name ?? "")
+                Text(selectedMovie.name )
                     .foregroundColor(Color.white)
                 Text(selectedMovie.info?.info?.age ?? "")
                 Spacer()
