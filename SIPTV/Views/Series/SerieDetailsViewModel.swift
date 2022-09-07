@@ -12,7 +12,7 @@ class SerieDetailsViewModel: ObservableObject{
    
     @Published var selectedSection : String = "Saison 1"
 
-    @Published var selectedEpisodeID : String = ""
+    @Published var selectedEpisode : Episode?
     @Published var displayVideo : Bool = false
     
   

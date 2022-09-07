@@ -10,14 +10,23 @@ import SwiftUI
 
 @main
 struct SIPTVApp: App {
-    var xtreamManager = XtreamManager()
+    @StateObject var xtreamManager = XtreamManager.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject var appState = AppState()
     
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(xtreamManager.currentSession)
+            switch  appState.navigationSection {
+                case .mainView:
+                    MainView()
+                        .environmentObject(xtreamManager.currentSession)
+                        .environmentObject(appState)
+                        
+                case .profilsView:
+                ProfilsView(navigationSection: $appState.navigationSection, xtreamManager: xtreamManager)
+                }
         }
+        
     }
 }
 
@@ -29,3 +38,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return AppDelegate.orientationLock
     }
 }
+
+class AppState : ObservableObject{
+    @Published var navigationSection : NavigationSection = .profilsView
+    
+    enum NavigationSection{
+        case mainView
+        case profilsView
+    }
+}
+

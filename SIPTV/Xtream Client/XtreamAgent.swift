@@ -18,13 +18,7 @@ class XtreamAgent{
         self.profil = profil
     }
     
-    func getLiveCategories(completion:@escaping ([Category])->()){
-        let url = "\(profil.link)/player_api.php?username=\(profil.userName)&password=\(profil.password)&action=get_live_categories"
-        loadCategories(from: url) { categories in
-            completion(categories)
-        }
-    }
-    
+   
     func getVodCategories(completion:@escaping ([Category])->()){
         let url = "\(profil.link)/player_api.php?username=\(profil.userName)&password=\(profil.password)&action=get_vod_categories"
         loadCategories(from: url) { categories in
@@ -34,6 +28,13 @@ class XtreamAgent{
     
     func getSeriesCategories(completion:@escaping ([Category])->()){
         let url = "\(profil.link)/player_api.php?username=\(profil.userName)&password=\(profil.password)&action=get_series_categories"
+        loadCategories(from: url) { categories in
+            completion(categories)
+        }
+    }
+    
+    func getLiveCategories(completion:@escaping ([Category])->()){
+        let url = "\(profil.link)/player_api.php?username=\(profil.userName)&password=\(profil.password)&action=get_live_categories"
         loadCategories(from: url) { categories in
             completion(categories)
         }

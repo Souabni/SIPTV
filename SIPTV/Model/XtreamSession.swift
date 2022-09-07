@@ -10,16 +10,30 @@ import Foundation
 class XtreamSession: ObservableObject{
     
     var profil: Profil
-    let xtreamAgent : XtreamAgent
+    var xtreamAgent : XtreamAgent
     
     @Published var moviesCategories : [MoviesCategory] = []
     @Published var seriesCategories : [SeriesCategory] = []
-    var liveTVsCategories : [LiveTvCategory] = []
+    @Published var liveTVsCategories : [LiveTVCategory] = []
     
     var nbLoadedMoviesCategories = 0
     var nbLoadedSeriesCategories = 0
+    var nbLoadedLivesCategories = 0
     
     init(profil:Profil){
+        self.profil = profil
+        xtreamAgent  = XtreamAgent(profil: profil)
+      //  loadSession()
+    }
+    
+    func set(profil:Profil){
+        moviesCategories  = []
+        seriesCategories  = []
+        liveTVsCategories = []
+        
+         nbLoadedMoviesCategories = 0
+         nbLoadedSeriesCategories = 0
+         nbLoadedLivesCategories = 0
         self.profil = profil
         xtreamAgent  = XtreamAgent(profil: profil)
         loadSession()
@@ -28,8 +42,7 @@ class XtreamSession: ObservableObject{
     func loadSession(){
         loadMoviesCategories()
         loadSeriesCategories()
-       // loadSeries()
-        loadLives()
+        loadLivesCategories()
     }
     
     func loadMoviesCategories(){
@@ -61,8 +74,9 @@ class XtreamSession: ObservableObject{
         let xtreamAgent = XtreamAgent(profil: profil)
         xtreamAgent.getVodStreams(categoryID: category.id) { vodStreams in
             DispatchQueue.main.async {
-                let movieModels = vodStreams.map { vodStream in
-                    Movie(movieStream: vodStream, profil: self.profil)
+                let movieModels = vodStreams.map { vodStream -> Movie in
+                    let movieUrlBase = "\(self.profil.link)/movie/\(self.profil.userName)/\(self.profil.password)/"
+                   return Movie(movieStream: vodStream,movieUrlBase: movieUrlBase)
                 }
                 category.movies =  movieModels
                 completion()
@@ -100,8 +114,9 @@ class XtreamSession: ObservableObject{
         let xtreamAgent = XtreamAgent(profil: profil)
         xtreamAgent.getSeriesStreams(categoryID: category.id) { serieStreams in
             DispatchQueue.main.async {
-                let serieModels = serieStreams.map { serieStream in
-                    Serie(serieStream: serieStream, profil: self.profil)
+                let serieModels = serieStreams.map { serieStream -> Serie in
+                    let seriesUrlBase = "\(self.profil.link)/series/\(self.profil.userName)/\(self.profil.password)/"
+                    return Serie(serieStream: serieStream,seriesUrlBase: seriesUrlBase)
                 }
                 category.series =  serieModels
                 completion()
@@ -109,7 +124,40 @@ class XtreamSession: ObservableObject{
         }
     }
     
+    func loadLivesCategories(){
+        let xtreamAgent = XtreamAgent(profil: profil)
+        xtreamAgent.getLiveCategories{categories in
+            DispatchQueue.main.async {
+                for category in categories {
+                    print(category.title)
+                    let liveTVCategory = LiveTVCategory(category: category)
+                    self.liveTVsCategories.append(liveTVCategory)
+                }
+                self.loadLives()
+            }
+        }
+    }
+    
     func loadLives(){
         
+        if self.nbLoadedLivesCategories < liveTVsCategories.count{
+            loadLives(for: liveTVsCategories[nbLoadedLivesCategories]) {
+                self.nbLoadedLivesCategories += 1
+                self.loadLives()
+            }
+        }
+    }
+    
+    func loadLives(for category:LiveTVCategory, completion:@escaping ()->()){
+        let xtreamAgent = XtreamAgent(profil: profil)
+        xtreamAgent.getLiveStreams(categoryID: category.id) { liveStreams in
+            DispatchQueue.main.async {
+                let liveTVModels = liveStreams.map { liveStream in
+                    LiveTV(liveStream: liveStream, profil: self.profil)
+                }
+                category.tvs =  liveTVModels
+                completion()
+            }
+        }
     }
 }

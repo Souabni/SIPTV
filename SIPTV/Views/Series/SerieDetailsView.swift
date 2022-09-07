@@ -91,10 +91,10 @@ struct SerieDetailsView: View {
                             Text(season.name)
                             ForEach (season.episodes,id:\.id){ episode in
                                 Button{
-                                    self.serieDetailsVM.selectedEpisodeID = episode.id
+                                    self.serieDetailsVM.selectedEpisode = episode
                                     self.serieDetailsVM.displayVideo = true
                                 }label:{
-                                    EpisodeView(episodeID:episode.id,coverUrl:  episode.coverUrl, title: episode.title, description:  episode.description, displayVideo:$serieDetailsVM.displayVideo,selectedEpisodeID:$serieDetailsVM.selectedEpisodeID)
+                                    EpisodeView(episode:episode, displayVideo: $serieDetailsVM.displayVideo,selectedEpisode:$serieDetailsVM.selectedEpisode)
                                 }
                             }
                         }
@@ -116,7 +116,10 @@ struct SerieDetailsView: View {
             UIDevice.current.setValue(value, forKey: "orientation")
             //presentationMode.wrappedValue.dismiss()
         }) {
-            VideoPlayerView(videoURL: "http://556677.ovh:25461/series/hn8rr4tp/opjmhaga/\(serieDetailsVM.selectedEpisodeID).mp4")
+            if let selectedEpisode = serieDetailsVM.selectedEpisode{
+                VideoPlayerView(videoURL: selectedEpisode.url)
+            }
+          
         }
         .onAppear(){
             serieDetailsVM.getSerieInfo()

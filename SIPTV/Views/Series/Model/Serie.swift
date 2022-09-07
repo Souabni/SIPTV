@@ -22,13 +22,14 @@ class Serie: ObservableObject{
     @Published var seasons: [Season] = []
     
     @Published var info: SerieInfo?
+    var seriesUrlBase : String
     
-    init(serieStream:SeriesStream, profil: Profil){
+    init(serieStream:SeriesStream,seriesUrlBase:String){
         self.serieID = serieStream.seriesID ?? 0
         self.name = serieStream.name ?? ""
         self.iconUrl = serieStream.cover ?? ""
         self.description = serieStream.plot ?? ""
-  
+        self.seriesUrlBase = seriesUrlBase
     }
    
     func set(info:SerieInfo){
@@ -52,7 +53,7 @@ class Serie: ObservableObject{
                 if let seasonInfo = info.episodes?[key]{
                     let season = Season()
                     for episodeInfo in seasonInfo{
-                        let episode = Episode(id: episodeInfo.id ?? "", episodeNum: episodeInfo.episodeNum ?? 0, title: episodeInfo.title ?? "",description: episodeInfo.info?.plot ?? "",coverUrl: episodeInfo.info?.movieImage ?? "")
+                        let episode = Episode(id: episodeInfo.id ?? "", episodeNum: episodeInfo.episodeNum ?? 0, title: episodeInfo.title ?? "",description: episodeInfo.info?.plot ?? "",coverUrl: episodeInfo.info?.movieImage ?? "", seriesUrlBase: seriesUrlBase)
                         season.episodes.append(episode)
                     }
                      if let seasonInfo = seasonsInfo.filter({String($0.seasonNumber) == key}).first{

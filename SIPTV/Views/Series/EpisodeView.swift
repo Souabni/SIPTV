@@ -9,24 +9,21 @@ import SwiftUI
 import Kingfisher
 
 struct EpisodeView: View {
-    var episodeID : String
-    var coverUrl : String
-    var title : String
-    var description : String
+    var episode : Episode
     
     @Binding var displayVideo : Bool
-    @Binding var selectedEpisodeID : String
+    @Binding var selectedEpisode : Episode?
     
     var body: some View {
         VStack{
             
             HStack{
                 Button{
-                  selectedEpisodeID = episodeID
+                    selectedEpisode = episode
                     displayVideo = true
                 }label:{
                     ZStack{
-                        if let iconURL = URL(string:coverUrl){
+                        if let iconURL = URL(string:episode.coverUrl){
                             
                             KFImage(iconURL)
                                 .placeholder {
@@ -50,11 +47,11 @@ struct EpisodeView: View {
                 }
                 
            
-            Text(title)
+                Text(episode.title)
             Spacer()
             }
             
-            Text(description)
+            Text(episode.description)
         }
     }
 }

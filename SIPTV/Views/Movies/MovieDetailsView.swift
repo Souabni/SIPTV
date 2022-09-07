@@ -19,7 +19,7 @@ struct MovieDetailsView: View {
         VStack(alignment: .leading){
             ZStack(alignment: .topTrailing){
                 ZStack{
-                    if let movieImage = selectedMovie.info?.info?.movieImage, let movieImageURL = URL(string:movieImage){
+                    if let movieImage = selectedMovie.iconUrl, let movieImageURL = URL(string:movieImage){
                         KFImage(movieImageURL)
                             .placeholder {
                                 Image("placeholderMovie")
@@ -92,8 +92,10 @@ struct MovieDetailsView: View {
         .ignoresSafeArea()
         .onAppear{
             currentXtreamSession.xtreamAgent.getVodInfo(vodID: selectedMovie.movieID) { vodInfo in
-                print(vodInfo)
-                selectedMovie.info = vodInfo
+                DispatchQueue.main.async {
+                    print(vodInfo)
+                    selectedMovie.info = vodInfo
+                }
             }
         }
         .sheet(isPresented: $displayVideo,onDismiss: {

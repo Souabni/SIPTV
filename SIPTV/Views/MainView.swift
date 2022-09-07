@@ -10,8 +10,9 @@ import SwiftUI
 struct MainView: View {
     @State var selectedSection : Section = .movies
     var body: some View {
+        GeometryReader { geometry in
         NavigationView{
-            ZStack(alignment: .top ){
+            ZStack(alignment: .bottom ){
                 
                 switch selectedSection {
                 case .movies:
@@ -23,13 +24,15 @@ struct MainView: View {
                 }
                 
                 SectionsBarView(section: $selectedSection)
-                    .frame(height:84)
-                   .background(Color.black)
+                    .frame(width:geometry.size.width*4/5, height:84)
+                    .padding(.bottom,30)
+                   
             }
             .navigationBarHidden(true)
             .ignoresSafeArea()
         }
         .enableLightStatusBar()
+        }
         
     }
 }

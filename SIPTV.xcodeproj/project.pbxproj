@@ -17,6 +17,25 @@
 		9D04A10328C1066A0032E2BB /* SerieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A10228C1066A0032E2BB /* SerieInfo.swift */; };
 		9D04A10528C122B30032E2BB /* SeasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A10428C122B30032E2BB /* SeasonView.swift */; };
 		9D04A10728C1263D0032E2BB /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D04A10628C1263D0032E2BB /* EpisodeView.swift */; };
+		9D35711F28C64F45005A62C5 /* XtreamLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D35711E28C64F45005A62C5 /* XtreamLoginView.swift */; };
+		9D35712228C64F9F005A62C5 /* ProfilsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D35712128C64F9F005A62C5 /* ProfilsView.swift */; };
+		9D35712428C64FF2005A62C5 /* ProfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D35712328C64FF2005A62C5 /* ProfilCell.swift */; };
+		9D676E0D28C5181400192DC5 /* LiveTVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E0C28C5181400192DC5 /* LiveTVViewModel.swift */; };
+		9D676E1328C5192A00192DC5 /* LiveTVCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E1228C5192A00192DC5 /* LiveTVCategory.swift */; };
+		9D676E1528C5194200192DC5 /* LiveTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E1428C5194200192DC5 /* LiveTV.swift */; };
+		9D676E1728C51E9000192DC5 /* tvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E1628C51E9000192DC5 /* tvView.swift */; };
+		9D676E1928C52DCF00192DC5 /* LiveVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E1828C52DCF00192DC5 /* LiveVideoPlayerView.swift */; };
+		9D676E2828C535AD00192DC5 /* VLCVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E1C28C535AD00192DC5 /* VLCVideoPlayerView.swift */; };
+		9D676E2928C535AD00192DC5 /* VideoProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E1D28C535AD00192DC5 /* VideoProgressBar.swift */; };
+		9D676E2A28C535AD00192DC5 /* DragGestureActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E1E28C535AD00192DC5 /* DragGestureActions.swift */; };
+		9D676E2B28C535AD00192DC5 /* header.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E1F28C535AD00192DC5 /* header.m */; };
+		9D676E2C28C535AD00192DC5 /* VlcPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E2028C535AD00192DC5 /* VlcPlayerView.swift */; };
+		9D676E2D28C535AD00192DC5 /* VlcPlayerCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E2128C535AD00192DC5 /* VlcPlayerCopy.swift */; };
+		9D676E2E28C535AD00192DC5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E2228C535AD00192DC5 /* Config.swift */; };
+		9D676E2F28C535AD00192DC5 /* UIScreen+size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E2328C535AD00192DC5 /* UIScreen+size.swift */; };
+		9D676E3028C535AD00192DC5 /* VlcPlayerCopyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E2428C535AD00192DC5 /* VlcPlayerCopyView.swift */; };
+		9D676E3128C535AD00192DC5 /* View+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E2528C535AD00192DC5 /* View+cornerRadius.swift */; };
+		9D676E3228C535AD00192DC5 /* VlcPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D676E2728C535AD00192DC5 /* VlcPlayer.swift */; };
 		9DA4315D28BE154600CF4A75 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4315C28BE154600CF4A75 /* Fonts.swift */; };
 		9DA4316128BE18E300CF4A75 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4316028BE18E300CF4A75 /* Movie.swift */; };
 		9DA4317A28BE738D00CF4A75 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4317328BE737900CF4A75 /* Roboto-Black.ttf */; };
@@ -62,7 +81,6 @@
 		D76C4B2B28B7EED50065CDCD /* MovieCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2A28B7EED50065CDCD /* MovieCategoryView.swift */; };
 		D76C4B2D28B7F0A50065CDCD /* XtreamSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2C28B7F0A50065CDCD /* XtreamSession.swift */; };
 		D76C4B3028B7F1BF0065CDCD /* MoviesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B2F28B7F1BF0065CDCD /* MoviesCategory.swift */; };
-		D76C4B3428B7F2230065CDCD /* LiveTvCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76C4B3328B7F2230065CDCD /* LiveTvCategory.swift */; };
 		D7F330F628B945EB001C6E46 /* MovieCategoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F330F528B945EB001C6E46 /* MovieCategoryDetailsView.swift */; };
 		D7F330F828B95BD6001C6E46 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F330F728B95BD6001C6E46 /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +96,26 @@
 		9D04A10228C1066A0032E2BB /* SerieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieInfo.swift; sourceTree = "<group>"; };
 		9D04A10428C122B30032E2BB /* SeasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonView.swift; sourceTree = "<group>"; };
 		9D04A10628C1263D0032E2BB /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		9D35711E28C64F45005A62C5 /* XtreamLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamLoginView.swift; sourceTree = "<group>"; };
+		9D35712128C64F9F005A62C5 /* ProfilsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilsView.swift; sourceTree = "<group>"; };
+		9D35712328C64FF2005A62C5 /* ProfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCell.swift; sourceTree = "<group>"; };
+		9D676E0C28C5181400192DC5 /* LiveTVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTVViewModel.swift; sourceTree = "<group>"; };
+		9D676E1228C5192A00192DC5 /* LiveTVCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTVCategory.swift; sourceTree = "<group>"; };
+		9D676E1428C5194200192DC5 /* LiveTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTV.swift; sourceTree = "<group>"; };
+		9D676E1628C51E9000192DC5 /* tvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvView.swift; sourceTree = "<group>"; };
+		9D676E1828C52DCF00192DC5 /* LiveVideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVideoPlayerView.swift; sourceTree = "<group>"; };
+		9D676E1B28C535AC00192DC5 /* SIPTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SIPTV-Bridging-Header.h"; sourceTree = "<group>"; };
+		9D676E1C28C535AD00192DC5 /* VLCVideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLCVideoPlayerView.swift; sourceTree = "<group>"; };
+		9D676E1D28C535AD00192DC5 /* VideoProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProgressBar.swift; sourceTree = "<group>"; };
+		9D676E1E28C535AD00192DC5 /* DragGestureActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragGestureActions.swift; sourceTree = "<group>"; };
+		9D676E1F28C535AD00192DC5 /* header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = header.m; sourceTree = "<group>"; };
+		9D676E2028C535AD00192DC5 /* VlcPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VlcPlayerView.swift; sourceTree = "<group>"; };
+		9D676E2128C535AD00192DC5 /* VlcPlayerCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VlcPlayerCopy.swift; sourceTree = "<group>"; };
+		9D676E2228C535AD00192DC5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9D676E2328C535AD00192DC5 /* UIScreen+size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+size.swift"; sourceTree = "<group>"; };
+		9D676E2428C535AD00192DC5 /* VlcPlayerCopyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VlcPlayerCopyView.swift; sourceTree = "<group>"; };
+		9D676E2528C535AD00192DC5 /* View+cornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+cornerRadius.swift"; sourceTree = "<group>"; };
+		9D676E2728C535AD00192DC5 /* VlcPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VlcPlayer.swift; sourceTree = "<group>"; };
 		9DA4315C28BE154600CF4A75 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		9DA4316028BE18E300CF4A75 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9DA4316A28BE737800CF4A75 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -127,7 +165,6 @@
 		D76C4B2A28B7EED50065CDCD /* MovieCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCategoryView.swift; sourceTree = "<group>"; };
 		D76C4B2C28B7F0A50065CDCD /* XtreamSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamSession.swift; sourceTree = "<group>"; };
 		D76C4B2F28B7F1BF0065CDCD /* MoviesCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCategory.swift; sourceTree = "<group>"; };
-		D76C4B3328B7F2230065CDCD /* LiveTvCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTvCategory.swift; sourceTree = "<group>"; };
 		D7F330F528B945EB001C6E46 /* MovieCategoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCategoryDetailsView.swift; sourceTree = "<group>"; };
 		D7F330F728B95BD6001C6E46 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +191,70 @@
 				9DD0254428C2A46500360DFD /* Episode.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9D35712028C64F6E005A62C5 /* ProfilsLogin */ = {
+			isa = PBXGroup;
+			children = (
+				9D35711E28C64F45005A62C5 /* XtreamLoginView.swift */,
+				9D35712128C64F9F005A62C5 /* ProfilsView.swift */,
+				9D35712328C64FF2005A62C5 /* ProfilCell.swift */,
+			);
+			path = ProfilsLogin;
+			sourceTree = "<group>";
+		};
+		9D676E0E28C5189800192DC5 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				D71C05A428B6DF1C00FBFC5C /* MovieStream.swift */,
+				9DA4318F28BF9E0300CF4A75 /* VodInfo.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		9D676E0F28C518A400192DC5 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				D76C4B1928B77D610065CDCD /* SeriesStream.swift */,
+				9D04A10228C1066A0032E2BB /* SerieInfo.swift */,
+			);
+			path = Series;
+			sourceTree = "<group>";
+		};
+		9D676E1028C518B300192DC5 /* LiveTV */ = {
+			isa = PBXGroup;
+			children = (
+				D71C05A228B6DA5200FBFC5C /* LiveStream.swift */,
+			);
+			path = LiveTV;
+			sourceTree = "<group>";
+		};
+		9D676E1128C5190D00192DC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D676E1228C5192A00192DC5 /* LiveTVCategory.swift */,
+				9D676E1428C5194200192DC5 /* LiveTV.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D676E1A28C5351F00192DC5 /* VLC */ = {
+			isa = PBXGroup;
+			children = (
+				9D676E2228C535AD00192DC5 /* Config.swift */,
+				9D676E1E28C535AD00192DC5 /* DragGestureActions.swift */,
+				9D676E1F28C535AD00192DC5 /* header.m */,
+				9D676E2328C535AD00192DC5 /* UIScreen+size.swift */,
+				9D676E1C28C535AD00192DC5 /* VLCVideoPlayerView.swift */,
+				9D676E1D28C535AD00192DC5 /* VideoProgressBar.swift */,
+				9D676E2528C535AD00192DC5 /* View+cornerRadius.swift */,
+				9D676E2728C535AD00192DC5 /* VlcPlayer.swift */,
+				9D676E2128C535AD00192DC5 /* VlcPlayerCopy.swift */,
+				9D676E2428C535AD00192DC5 /* VlcPlayerCopyView.swift */,
+				9D676E2028C535AD00192DC5 /* VlcPlayerView.swift */,
+				9D676E1B28C535AC00192DC5 /* SIPTV-Bridging-Header.h */,
+			);
+			path = VLC;
 			sourceTree = "<group>";
 		};
 		9DA4315928BE146000CF4A75 /* Resources */ = {
@@ -197,7 +298,10 @@
 		9DA4316228BE6B1300CF4A75 /* LiveTvs */ = {
 			isa = PBXGroup;
 			children = (
+				9D676E1128C5190D00192DC5 /* Model */,
 				D76C4B2428B7ECC30065CDCD /* LiveTVView.swift */,
+				9D676E0C28C5181400192DC5 /* LiveTVViewModel.swift */,
+				9D676E1628C51E9000192DC5 /* tvView.swift */,
 			);
 			path = LiveTvs;
 			sourceTree = "<group>";
@@ -254,6 +358,7 @@
 		D71C057928B67D0500FBFC5C = {
 			isa = PBXGroup;
 			children = (
+				9D676E1A28C5351F00192DC5 /* VLC */,
 				D71C058428B67D0500FBFC5C /* SIPTV */,
 				D71C058328B67D0500FBFC5C /* Products */,
 				B5BF5A59471035F28ECF9BB4 /* Pods */,
@@ -295,11 +400,9 @@
 				D71C059F28B6C81000FBFC5C /* XtreamAgent.swift */,
 				D71C059B28B6B32400FBFC5C /* Profil.swift */,
 				D71C059D28B6C66A00FBFC5C /* Category.swift */,
-				D71C05A228B6DA5200FBFC5C /* LiveStream.swift */,
-				D71C05A428B6DF1C00FBFC5C /* MovieStream.swift */,
-				D76C4B1928B77D610065CDCD /* SeriesStream.swift */,
-				9DA4318F28BF9E0300CF4A75 /* VodInfo.swift */,
-				9D04A10228C1066A0032E2BB /* SerieInfo.swift */,
+				9D676E0E28C5189800192DC5 /* Movie */,
+				9D676E0F28C518A400192DC5 /* Series */,
+				9D676E1028C518B300192DC5 /* LiveTV */,
 			);
 			path = "Xtream Client";
 			sourceTree = "<group>";
@@ -309,9 +412,10 @@
 			children = (
 				D76C4B1D28B797180065CDCD /* MainView.swift */,
 				D76C4B2728B7ED170065CDCD /* SectionsBarView.swift */,
+				9D35712028C64F6E005A62C5 /* ProfilsLogin */,
 				D76C4B2928B7EEBA0065CDCD /* Movies */,
-				9DA4316228BE6B1300CF4A75 /* LiveTvs */,
 				9DA4315E28BE15AE00CF4A75 /* Series */,
+				9DA4316228BE6B1300CF4A75 /* LiveTvs */,
 				9DA4316328BE6B2D00CF4A75 /* Others */,
 			);
 			path = Views;
@@ -327,6 +431,7 @@
 				D7F330F528B945EB001C6E46 /* MovieCategoryDetailsView.swift */,
 				D74BB89428BBDCB60028E0DC /* MovieDetailsView.swift */,
 				D74BB89628BBF9370028E0DC /* VideoPlayerView.swift */,
+				9D676E1828C52DCF00192DC5 /* LiveVideoPlayerView.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -336,7 +441,6 @@
 			children = (
 				D76C4B1B28B7962D0065CDCD /* XtreamManager.swift */,
 				D76C4B2C28B7F0A50065CDCD /* XtreamSession.swift */,
-				D76C4B3328B7F2230065CDCD /* LiveTvCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +456,7 @@
 				D71C057E28B67D0500FBFC5C /* Sources */,
 				D71C057F28B67D0500FBFC5C /* Frameworks */,
 				D71C058028B67D0500FBFC5C /* Resources */,
+				9BD1048B8D92BBA145893C1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +482,7 @@
 				TargetAttributes = {
 					D71C058128B67D0500FBFC5C = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -430,6 +536,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9BD1048B8D92BBA145893C1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIPTV/Pods-SIPTV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIPTV/Pods-SIPTV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SIPTV/Pods-SIPTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DA1B4729E708DF1AB5302082 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -459,7 +582,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D676E2C28C535AD00192DC5 /* VlcPlayerView.swift in Sources */,
 				D71C05A528B6DF1C00FBFC5C /* MovieStream.swift in Sources */,
+				9D676E2F28C535AD00192DC5 /* UIScreen+size.swift in Sources */,
+				9D676E1728C51E9000192DC5 /* tvView.swift in Sources */,
+				9D676E2E28C535AD00192DC5 /* Config.swift in Sources */,
 				9DD0254528C2A46500360DFD /* Episode.swift in Sources */,
 				9DD0254328C2A35C00360DFD /* Season.swift in Sources */,
 				D76C4B2528B7ECC30065CDCD /* LiveTVView.swift in Sources */,
@@ -468,33 +595,47 @@
 				D7F330F628B945EB001C6E46 /* MovieCategoryDetailsView.swift in Sources */,
 				D76C4B3028B7F1BF0065CDCD /* MoviesCategory.swift in Sources */,
 				9D04A0FD28C0FB9B0032E2BB /* SerieCell.swift in Sources */,
+				9D676E2D28C535AD00192DC5 /* VlcPlayerCopy.swift in Sources */,
 				9D04A10528C122B30032E2BB /* SeasonView.swift in Sources */,
+				9D35712428C64FF2005A62C5 /* ProfilCell.swift in Sources */,
 				D76C4B2128B7EC610065CDCD /* MoviesView.swift in Sources */,
+				9D676E1528C5194200192DC5 /* LiveTV.swift in Sources */,
+				9D676E3028C535AD00192DC5 /* VlcPlayerCopyView.swift in Sources */,
+				9D676E0D28C5181400192DC5 /* LiveTVViewModel.swift in Sources */,
 				D74BB89728BBF9370028E0DC /* VideoPlayerView.swift in Sources */,
 				9DA4319028BF9E0300CF4A75 /* VodInfo.swift in Sources */,
+				9D676E3128C535AD00192DC5 /* View+cornerRadius.swift in Sources */,
 				9D04A10128C0FC610032E2BB /* SerieDetailsView.swift in Sources */,
+				9D676E1328C5192A00192DC5 /* LiveTVCategory.swift in Sources */,
 				9DD0254128C29EE800360DFD /* SerieDetailsViewModel.swift in Sources */,
 				9D04A10328C1066A0032E2BB /* SerieInfo.swift in Sources */,
 				D76C4B2B28B7EED50065CDCD /* MovieCategoryView.swift in Sources */,
+				9D676E3228C535AD00192DC5 /* VlcPlayer.swift in Sources */,
 				D71C059C28B6B32400FBFC5C /* Profil.swift in Sources */,
 				9D04A0FB28C0F96D0032E2BB /* SerieCategoryView.swift in Sources */,
 				9D04A0F728C0F8360032E2BB /* SeriesCategory.swift in Sources */,
-				D76C4B3428B7F2230065CDCD /* LiveTvCategory.swift in Sources */,
 				D7F330F828B95BD6001C6E46 /* NavigationBar.swift in Sources */,
 				9D04A10728C1263D0032E2BB /* EpisodeView.swift in Sources */,
 				9DA4318E28BE79A800CF4A75 /* LightStatusBarModifier.swift in Sources */,
 				D76C4B1E28B797180065CDCD /* MainView.swift in Sources */,
+				9D676E2B28C535AD00192DC5 /* header.m in Sources */,
 				D76C4B2328B7EC760065CDCD /* SeriesView.swift in Sources */,
+				9D35711F28C64F45005A62C5 /* XtreamLoginView.swift in Sources */,
 				9D04A0FF28C0FBC70032E2BB /* SerieCategoryDetailsView.swift in Sources */,
 				9DA4315D28BE154600CF4A75 /* Fonts.swift in Sources */,
+				9D676E2828C535AD00192DC5 /* VLCVideoPlayerView.swift in Sources */,
 				D71C058628B67D0500FBFC5C /* SIPTVApp.swift in Sources */,
 				D76C4B2828B7ED170065CDCD /* SectionsBarView.swift in Sources */,
+				9D676E2928C535AD00192DC5 /* VideoProgressBar.swift in Sources */,
 				D76C4B1A28B77D610065CDCD /* SeriesStream.swift in Sources */,
+				9D35712228C64F9F005A62C5 /* ProfilsView.swift in Sources */,
 				D71C059E28B6C66A00FBFC5C /* Category.swift in Sources */,
+				9D676E2A28C535AD00192DC5 /* DragGestureActions.swift in Sources */,
 				D71C05A028B6C81000FBFC5C /* XtreamAgent.swift in Sources */,
 				9DA4316128BE18E300CF4A75 /* Movie.swift in Sources */,
 				D71C05A328B6DA5200FBFC5C /* LiveStream.swift in Sources */,
 				9DA4318C28BE754400CF4A75 /* MovieCell.swift in Sources */,
+				9D676E1928C52DCF00192DC5 /* LiveVideoPlayerView.swift in Sources */,
 				D76C4B1C28B7962D0065CDCD /* XtreamManager.swift in Sources */,
 				9D04A0F928C0F84E0032E2BB /* Serie.swift in Sources */,
 			);
@@ -625,10 +766,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SIPTV/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = H3L65AU3DA;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SIPTV/Resources/Info.plist;
@@ -637,7 +780,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -646,6 +789,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.myway.SIPTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "VLC/SIPTV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -657,10 +802,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SIPTV/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = H3L65AU3DA;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SIPTV/Resources/Info.plist;
@@ -669,7 +816,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -678,6 +825,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.myway.SIPTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "VLC/SIPTV-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -14,7 +14,7 @@ class Movie : ObservableObject{
     var url: String
     @Published var info: VodInfo?
     
-    init(movieStream:MovieStream, profil: Profil){
+    init(movieStream:MovieStream, movieUrlBase: String){
         self.movieID = movieStream.streamID ?? 0
         self.name = movieStream.name ?? ""
        
@@ -22,7 +22,7 @@ class Movie : ObservableObject{
        
         let videoID = movieStream.streamID ?? 0
         let containerExtension = movieStream.containerExtension ?? "mp4"
-        self.url = "\(profil.link)/movie/\(profil.userName)/\(profil.password)/\(videoID).\(containerExtension)"
+        self.url = "\(movieUrlBase)\(videoID).\(containerExtension)"
         
     }
     
