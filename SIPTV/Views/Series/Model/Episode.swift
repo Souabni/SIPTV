@@ -15,13 +15,16 @@ class Episode: ObservableObject{
     var description: String
     var coverUrl: String
     var url : String
-    internal init(id: String, episodeNum: Int, title: String,description: String,coverUrl:String,seriesUrlBase:String) {
+    var releaseDate : String
+   
+    internal init(id: String, episodeNum: Int, title: String,description: String,coverUrl:String,seriesUrlBase:String,releaseDate : String) {
         self.id = id
         self.episodeNum = episodeNum
         self.title = title
         self.description = description
         self.coverUrl = coverUrl
         self.url = "\(seriesUrlBase)\(id).mp4"
+        self.releaseDate = releaseDate
     }
     
 }

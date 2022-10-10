@@ -14,9 +14,7 @@ struct LightStatusBarModifier: ViewModifier {
             .onAppear {
                 UIApplication.shared.statusBarStyle = .lightContent
             }
-            .onDisappear {
-                UIApplication.shared.statusBarStyle = .default
-            }
+           
     }
 }
 

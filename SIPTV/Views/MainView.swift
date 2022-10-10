@@ -31,14 +31,8 @@ struct MainView: View {
             .navigationBarHidden(true)
             .ignoresSafeArea()
         }
-        .enableLightStatusBar()
         }
+        .enableLightStatusBar()
         
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }

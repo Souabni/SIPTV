@@ -52,7 +52,7 @@ struct SerieCategoryDetailsView: View {
         }
         .navigationBarHidden(true)
         .ignoresSafeArea()
-        .sheet(isPresented: $displaySerie) {
+        .fullScreenCover(isPresented: $displaySerie) {
             if let selectedSerie = selectedSerie{
                 SerieDetailsView(serieDetailsVM: SerieDetailsViewModel(selectedSerie: selectedSerie))
             }

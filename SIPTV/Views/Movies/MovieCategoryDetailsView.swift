@@ -51,7 +51,7 @@ struct MovieCategoryDetailsView: View {
         }
         .navigationBarHidden(true)
         .ignoresSafeArea()
-        .sheet(isPresented: $displayMovie) {
+        .fullScreenCover(isPresented: $displayMovie) {
             if let selectedMovie = selectedMovie{
                 MovieDetailsView(selectedMovie: selectedMovie)
             }

@@ -15,13 +15,22 @@ class Serie: ObservableObject{
     @Published var coverUrl: String?
     @Published var description: String
     @Published var rating5based: Double?
-    @Published var genre: String?
+
     @Published var cast: String?
-    
+   
+    @Published var genres: [String] = []
     var seasonsInfo: [Season] = []
     @Published var seasons: [Season] = []
     
     @Published var info: SerieInfo?
+    {
+        didSet{
+            if let genre = info?.info?.genre{
+                self.genres = genre.split(separator: ",").map{String($0)}
+            }
+         
+        }
+    }
     var seriesUrlBase : String
     
     init(serieStream:SeriesStream,seriesUrlBase:String){
@@ -35,10 +44,11 @@ class Serie: ObservableObject{
     func set(info:SerieInfo){
         self.info = info
         self.rating5based = info.info?.rating5based
-        self.genre = info.info?.genre
+  
         self.cast = info.info?.cast
         
         if let seasonsInfos = info.seasons{
+            seasons.removeAll()
             for seasonInfo in seasonsInfos{
                 let season = Season()
                 season.name = seasonInfo.name ?? ""
@@ -53,7 +63,7 @@ class Serie: ObservableObject{
                 if let seasonInfo = info.episodes?[key]{
                     let season = Season()
                     for episodeInfo in seasonInfo{
-                        let episode = Episode(id: episodeInfo.id ?? "", episodeNum: episodeInfo.episodeNum ?? 0, title: episodeInfo.title ?? "",description: episodeInfo.info?.plot ?? "",coverUrl: episodeInfo.info?.movieImage ?? "", seriesUrlBase: seriesUrlBase)
+                        let episode = Episode(id: episodeInfo.id ?? "", episodeNum: episodeInfo.episodeNum ?? 0, title: episodeInfo.title ?? "",description: episodeInfo.info?.plot ?? "",coverUrl: episodeInfo.info?.movieImage ?? "", seriesUrlBase: seriesUrlBase,releaseDate: episodeInfo.info?.releasedate ?? "")
                         season.episodes.append(episode)
                     }
                      if let seasonInfo = seasonsInfo.filter({String($0.seasonNumber) == key}).first{

@@ -11,7 +11,7 @@ struct SeasonView: View {
     
     var sections : [String]
     @Binding var selectedSection : String
-    var action : ()->()
+   
     
     var body: some View {
         ScrollView(.horizontal){
@@ -21,11 +21,11 @@ struct SeasonView: View {
                     ForEach(sections,id:\.self){section in
                         Button{
                             selectedSection = section
-                            action()
+                         
                         }label:{
                             VStack(spacing:4){
                                 Text(section)
-                                
+                                    .font(.custom(RobotoFont.bold.rawValue, size: 14))
                                 Rectangle()
                                     .strokeBorder(Color.red,lineWidth: 0)
                                     .background(selectedSection == section ? Color.red: Color.clear)

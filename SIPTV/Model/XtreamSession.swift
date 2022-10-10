@@ -24,6 +24,7 @@ class XtreamSession: ObservableObject{
         self.profil = profil
         xtreamAgent  = XtreamAgent(profil: profil)
       //  loadSession()
+        set(profil:self.profil)
     }
     
     func set(profil:Profil){

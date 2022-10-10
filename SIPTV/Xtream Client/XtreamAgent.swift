@@ -18,6 +18,30 @@ class XtreamAgent{
         self.profil = profil
     }
     
+    func authenticate(completion:@escaping (Authentication?)->()){
+        let url = "\(profil.link)/player_api.php?username=\(profil.userName)&password=\(profil.password)"
+        
+        loadJson(fromURLString: url) { result in
+            switch result{
+            case .success(let data):
+
+                do {
+                       let authentication = try JSONDecoder().decode(Authentication.self,
+                                                                  from: data)
+                    completion(authentication)
+
+                   } catch {
+                       print("decode error")
+                       completion(nil)
+                   }
+
+
+            case .failure(let error):
+                completion(nil)
+                print(error)
+            }
+        }
+    }
    
     func getVodCategories(completion:@escaping ([Category])->()){
         let url = "\(profil.link)/player_api.php?username=\(profil.userName)&password=\(profil.password)&action=get_vod_categories"

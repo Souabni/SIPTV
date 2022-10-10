@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Profil{
-    var title: String
-    var link: String
-    var userName: String
-    var password: String
+struct Profil: Codable{
+    var title: String = ""
+    var link: String = ""
+    var userName: String = ""
+    var password: String = ""
 }
